@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    overflow: hidden;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dotted-circle 
+{
+    height:17rem ;
+    width:17rem ;
+    background-color:transparent;
+    border: dashed 4px rgba(4, 56, 243, 0.5);
+    border-radius: 50%;
+    animation: rotate 30s linear infinite;
+    position: absolute;
+    z-index: -1;
+}
+
+.circle-content,.circle,.dotted-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle{
+    height: 15rem;
+    width: 15rem;
+    background-color: rgba(0, 153, 255, 0.15);
+    border-radius: 50%;
+}
+
+#file
+{
+    display:none;
+}
+
+@keyframes rotate
+{
+    0%
+    {
+        transform: rotate(0);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
