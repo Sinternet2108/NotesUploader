@@ -1,3 +1,7 @@
+:root{
+    --value: 0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -18,14 +22,14 @@ main
     height:17rem ;
     width:17rem ;
     background-color:transparent;
-    border: dashed 4px rgba(4, 56, 243, 0.5);
+    border: dashed 4px rgba(4, 56, 243, 0.502);
     border-radius: 50%;
     animation: rotate 30s linear infinite;
     position: absolute;
     z-index: -1;
 }
 
-.circle-content,.circle,.dotted-circle{
+.circle-content,.circle,.dotted-circle,.tickmark{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,3 +59,14 @@ main
         transform: rotate(360deg);
     }
 }
+
+.tick
+{
+    width: 80px; 
+    height: 80px;
+    position: absolute;
+    transform: scale(var(--value));  
+    transition: transform 1s ease;
+}
+
+
