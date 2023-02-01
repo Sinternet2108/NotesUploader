@@ -15,7 +15,7 @@
 
     </header>
     <main>
-        <form method="POST" action="">
+        <form id="form">
             <label for="file">
                 <div class="circle">
                     <div class="circle-content">
@@ -45,6 +45,36 @@
                     <div class="dotted-circle"></div>
                 </div>
             </label>
+            <div id="upload-form">
+                <select name="department">
+                    <option>CSE</option>
+                    <option>ISE</option>
+                    <option>ECE</option>
+                </select>
+                <select name="semester">
+                    <option>Sem 1</option>
+                    <option>Sem 2</option>
+                    <option>Sem 3</option>
+                    <option>Sem 4</option>
+                    <option>Sem 5</option>
+                    <option>Sem 6</option>
+                    <option>Sem 7</option>
+                    <option>Sem 8</option>
+                </select>
+                <select name="subject">
+                    <option>Mathematics</option>
+                    
+                </select>
+                <select name="module">
+                    <option>Module 1</option>
+                    <option>Module 2</option>
+                    <option>Module 3</option>
+                    <option>Module 4</option>
+                    <option>Module 5</option>
+                </select>
+                <button id="upload-button" type="submit">Finish</button>
+            </div>
+            <button type="button" id="div-button">Upload</button>
         </form>
     </main>
 </body>
