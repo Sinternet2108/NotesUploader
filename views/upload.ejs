@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>JSSATEB | Upload</title>
-    <link href="/css/upload.css" rel="stylesheet">
-    <script src="/js/upload.js" defer></script>
+    <link href="css/upload.css" rel="stylesheet">
+    <script src="js/upload.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     </header>
     <main>
         <!-- <div id="blur"></div> -->
-        <form id="form">
+        <form id="form" action="/upload" method="POST">
             <label for="file">
                 <div class="circle">
                     <div class="circle-content">
@@ -55,29 +55,29 @@
             <div id="upload-form">
                 <h1 id="form-heading">Fill The Form</h1>
                 <select name="department">
-                    <option>CSE</option>
-                    <option>ISE</option>
-                    <option>ECE</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ISE">ISE</option>
+                    <option value="ECE">ECE</option>
                 </select>
                 <select name="semester">
-                    <option>Sem 1</option>
-                    <option>Sem 2</option>
-                    <option>Sem 3</option>
-                    <option>Sem 4</option>
-                    <option>Sem 5</option>
-                    <option>Sem 6</option>
-                    <option>Sem 7</option>
-                    <option>Sem 8</option>
+                    <option value="Sem 1">Sem 1</option>
+                    <option value="Sem 2">Sem 2</option>
+                    <option value="Sem 3">Sem 3</option>
+                    <option value="Sem 4">Sem 4</option>
+                    <option value="Sem 5">Sem 5</option>
+                    <option value="Sem 6">Sem 6</option>
+                    <option value="Sem 7">Sem 7</option>
+                    <option value="Sem 8">Sem 8</option>
                 </select>
                 <select name="subject">
-                    <option>Mathematics</option>
+                    <option value="Mathematics">Mathematics</option>
                 </select>
                 <select name="module">
-                    <option>Module 1</option>
-                    <option>Module 2</option>
-                    <option>Module 3</option>
-                    <option>Module 4</option>
-                    <option>Module 5</option>
+                    <option value="Module 1">Module 1</option>
+                    <option value="Module 2">Module 2</option>
+                    <option value="Module 3">Module 3</option>
+                    <option value="Module 4">Module 4</option>
+                    <option value="Module 5">Module 5</option>
                 </select>
                 <button id="upload-button" type="submit">Finish</button>
             </div>
