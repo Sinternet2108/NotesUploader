@@ -23,6 +23,5 @@ inputElement.addEventListener("change",(event)=>{
 });
 
 divButton.addEventListener("click",()=>{
-    // uploadForm.style.setProperty("filter","blur(30px)");
     formElement.style.setProperty("height","90vh");
 });
