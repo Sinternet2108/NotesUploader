@@ -20,6 +20,7 @@ const app = express();
 app.use(express.urlencoded({extended:false}));
 app.use(express.static("public"));
 app.use("/notes",express.static("notes"));
+app.use(express.static("info"));
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
@@ -28,7 +29,7 @@ app.get("/",(req,res)=>{
     res.render("index");
 }); 
 
-app.get("/View",async(req,res)=>{
+app.get("/view",async(req,res)=>{
     const results = await db.getDb().collection("notes").find().toArray();
     res.render("notes",{results:results});
 })
@@ -52,8 +53,11 @@ app.post("/upload",upload.single("user-file"),async (req,res)=>{
 
     const result = await db.getDb().collection("notes").insertOne(Notes);
 
-    res.redirect("/upload");
+    res.redirect("/view");
 });
+
+
+
 
 db.getConnection().then(
     app.listen(3000)
